@@ -38,4 +38,36 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def single_table():
+    """Displays the multiplication table for one number."""
+    number = int(input("Enter a number: "))
 
+    print(f"\nMultiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i} = {number * i}")
+
+
+# -------------------------------------------------------------------------
+# PART B — Bonus: Tables from 1 to N
+# -------------------------------------------------------------------------
+def tables_to_n():
+    """Displays multiplication tables from 1 to N."""
+
+    n = int(input("\nEnter a positive integer (N): "))
+
+    if n <= 0:
+        print("Error: Please enter a positive integer.")
+        return
+
+    for number in range(1, n + 1):
+        print(f"\nMultiplication Table for {number}:")
+        for i in range(1, 13):
+            print(f"{number} x {i} = {number * i}")
+        print("-" * 30)
+
+
+# -------------------------------------------------------------------------
+# MAIN PROGRAM
+# -------------------------------------------------------------------------
+single_table()
+tables_to_n()
